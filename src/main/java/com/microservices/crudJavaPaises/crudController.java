@@ -61,7 +61,7 @@ public class crudController {
 	//2. Para acceder a solo un elemento del arreglo:
     @GetMapping("/{index}") //valor que entrega el usuario
     public String getItem(@PathVariable int index) {
-    	//validar que el index enviado corresponda con la cantidad de elementos que estan en la lista:
+    	// validar que el index enviado corresponda con la cantidad de elementos que estan en la lista:
     	if(index >= 0 && index < items.size()) {
     		return items.get(index);
     	}else {
